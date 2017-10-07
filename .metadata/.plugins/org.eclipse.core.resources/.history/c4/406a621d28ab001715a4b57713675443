@@ -1,0 +1,70 @@
+package com.demo.client;
+
+import java.rmi.RemoteException;
+import java.util.Scanner;
+
+import com.demo.service.CalculatorStub;
+import com.demo.service.CalculatorStub.Add;
+import com.demo.service.CalculatorStub.Div;
+import com.demo.service.CalculatorStub.Sub;
+
+public class ClientApp {
+
+	public static void main(String[] args) throws RemoteException {
+		while(true){
+			Scanner opts = new Scanner(System.in);
+			System.out.println("Vui long chon option");
+			int option = opts.nextInt();
+			CalculatorStub stub11 = new CalculatorStub();
+			switch (option) {
+			case 1:
+				Add div = new Add();
+				Scanner sc11 = new Scanner(System.in);
+				System.out.println("Vui long nhap so thu nhat:");
+				double X = sc11.nextDouble();
+				div.setX(X);
+				Scanner sc1 = new Scanner(System.in);
+				System.out.println("Vui long nhap so thu hai:");
+				double Y = sc11.nextDouble();
+				div.setY(Y);
+				System.out.println("Tong cua hai so la :"+stub11.add(div).get_return());
+				break;
+			case 2:
+				
+				Sub sub = new Sub();
+				Scanner subs = new Scanner(System.in);
+				System.out.println("Vui long nhap so thu nhat:");
+				double X1 = subs.nextDouble();
+				sub.setX(X1);
+				Scanner subss = new Scanner(System.in);
+				System.out.println("Vui long nhap so thu hai:");
+				double Y1 = subss.nextDouble();
+				sub.setY(Y1);
+				System.out.println("Hieu cua hai so la :"+stub11.sub(sub).get_return());
+				break;
+			case 3:
+			
+				Div div1 = new Div();
+				Scanner sc2 = new Scanner(System.in);
+				System.out.println("Vui long nhap so thu nhat:");
+				double X2 = sc2.nextDouble();
+				div1.setX(X2);
+				Scanner sc1111 = new Scanner(System.in);
+				System.out.println("Vui long nhap so thu hai:");
+				double Y11 = sc1111.nextDouble();
+				div1.setY(Y11);
+				System.out.println("Tong cua hai so la :"+stub11.div(div1).get_return());
+				break;
+
+			default:
+				System.out.println("ENDDDDD");
+				break;
+			}
+		}
+	
+		/*);
+		System.out.println("Tong cua hai so la :"+stub.sub(sub).get_return());*/
+		
+	}
+
+}

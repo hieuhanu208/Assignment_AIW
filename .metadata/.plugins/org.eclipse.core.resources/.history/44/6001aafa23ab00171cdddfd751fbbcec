@@ -1,0 +1,25 @@
+package com.demo.client;
+
+import java.rmi.RemoteException;
+import java.util.Scanner;
+
+import com.demo.service.CalculatorStub;
+import com.demo.service.CalculatorStub.Add;
+
+public class ClientApp {
+
+	public static void main(String[] args) throws RemoteException {
+		CalculatorStub stub = new CalculatorStub();
+		Add add = new Add();
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Vui long nhap so thu nhat:");
+		double X = sc.nextDouble();
+		add.setX(X);
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Vui long nhap so thu hai:");
+		double Y = sc.nextDouble();
+		add.setY(Y);
+		System.out.println(stub.add(add).get_return());
+	}
+
+}

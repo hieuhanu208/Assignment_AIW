@@ -1,0 +1,18 @@
+package com.demo.client;
+
+import java.rmi.RemoteException;
+
+import com.demo.service.CalculatorStub;
+import com.demo.service.CalculatorStub.Add;
+
+public class ClientApp {
+
+	public static void main(String[] args) throws RemoteException {
+		CalculatorStub stub = new CalculatorStub();
+		Add add = new Add();
+		add.setX(10);
+		add.setY(20);
+		System.out.println(stub.add(add).get_return());
+	}
+
+}

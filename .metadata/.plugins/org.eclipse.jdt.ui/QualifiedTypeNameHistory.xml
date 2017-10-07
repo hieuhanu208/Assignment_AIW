@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.demo.service.CalculatorStub.Add"/>
+<fullyQualifiedTypeName name="com.demo.service.CalculatorStub.Sub"/>
+<fullyQualifiedTypeName name="com.sun.org.apache.xpath.internal.operations.Div"/>
+<fullyQualifiedTypeName name="com.demo.service.CalculatorStub"/>
+<fullyQualifiedTypeName name="com.demo.service.CalculatorStub.Div"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+</qualifiedTypeNameHistroy>
